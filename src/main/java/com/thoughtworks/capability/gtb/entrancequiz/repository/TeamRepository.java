@@ -2,9 +2,9 @@ package com.thoughtworks.capability.gtb.entrancequiz.repository;
 
 import org.springframework.stereotype.Repository;
 
-public interface studentRepository {
+public class TeamRepository {
 
     @Repository
-    public interface studentRepository extends CrudRepository<student,Integer> {
+    public interface TeamRepository extends CrudRepository<Team,Integer> {
     }
 }
