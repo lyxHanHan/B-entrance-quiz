@@ -2,21 +2,18 @@ package com.thoughtworks.capability.gtb.entrancequiz.controller;
 
 import com.thoughtworks.capability.gtb.entrancequiz.domain.Student;
 import com.thoughtworks.capability.gtb.entrancequiz.service.StudentService;
+import com.thoughtworks.capability.gtb.entrancequiz.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class StudentController {
+public class TeamController {
     @Autowired
-    StudentService studentService;
+    TeamService teamService;
 
-    @GetMapping("/students")
-    public Student getAllStudents(){
-        List<Student> list = studentService.getAllStudents();
+    @PostMapping("/team")
+    public Team divideTeam(){
+        List<Team> list = teamService.divideTeam(Integer id);
         return ResponseEntity.ok(list);
     }
 }
