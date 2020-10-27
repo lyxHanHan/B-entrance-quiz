@@ -17,7 +17,8 @@ public class TeamService {
         final List<Student> list = new LinkedList<>();
         Iterable<Student> all = studentRepository.findAll();
         if(all.size % 6 == 0) {
-
+            int number = all.size/6;
+            List<Team1> = studentRepository.findById(0-(number-1));
         }
 
     }
